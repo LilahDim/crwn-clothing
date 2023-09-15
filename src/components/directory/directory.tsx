@@ -1,8 +1,8 @@
-import "./categories.styles.scss";
+import "./directory.styles.scss";
 import { categories } from "../../../constants";
 import CategoryItem from "../category-item/category-item";
 
-const Categories = () => {
+const Directory = () => {
   return (
     <div className="categories-container">
       {categories.map((category) => (
@@ -11,4 +11,4 @@ const Categories = () => {
     </div>
   );
 };
-export default Categories;
+export default Directory;
