@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/home/home.component";
 import Shop from "./routes/shop/shop.component";
 import Navigation from "./routes/navigation/navigation.component";
-import SignIn from "./routes/sign-in/sigin-in.component";
+import Authentication from "./routes/authentication/authentication.component";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "shop", element: <Shop /> },
-      { path: "sign-in", element: <SignIn /> },
+      { path: "auth", element: <Authentication /> },
     ],
   },
 ]);

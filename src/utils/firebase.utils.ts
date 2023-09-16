@@ -6,6 +6,7 @@ import {
   GoogleAuthProvider,
   User,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -72,4 +73,12 @@ export const createAuthUserWithEmailandPassword = async (
 ) => {
   if (!email || !password) return;
   return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+export const signInAuthUserWithEmailandPassword = async (
+  email: string,
+  password: string
+) => {
+  if (!email || !password) return;
+  return await signInWithEmailAndPassword(auth, email, password);
 };
